@@ -6,22 +6,23 @@ public class Producto {
 	private Double prec;
 	private Origen orig;
 	private Categoria cat;
+	private boolean estado; // Atributo adicional 
 	
-
 public enum Origen{
 	ARGENTINA, CHINA, BRASIL, URUGUAY ;
 }
-
-
 
 public enum Categoria{
 	TELEFONIA, INFORMATICA, ELECTROHOGAR, HERRAMIENTAS ;
 }
 
 
-public Producto() {
-	// TODO Auto-generated constructor stub
+
+
+public boolean getEstado() {
+	return estado;
 }
+
 
 
 
@@ -38,9 +39,11 @@ public void setCod(String cod) {
 
 
 
+
 public String getDes() {
 	return des;
 }
+
 
 
 
@@ -50,15 +53,18 @@ public void setDes(String des) {
 
 
 
+
 public double getPrec() {
 	return prec;
 }
 
 
 
+
 public void setPrec(double d) {
 	this.prec = d;
 }
+
 
 
 
@@ -75,15 +81,31 @@ public void setOrig(Origen orig) {
 
 
 
+
 public Categoria getCat() {
 	return cat;
 }
 
 
 
+
 public void setCat(Categoria cat) {
 	this.cat = cat;
 }
+
+
+
+
+public Producto(String cod, String des, Double prec, Origen orig, Categoria cat, boolean estado) {
+	super();
+	this.cod = cod;
+	this.des = des;
+	this.prec = prec;
+	this.orig = orig;
+	this.cat = cat;
+	this.estado = estado;
+}
+
 
 
 
